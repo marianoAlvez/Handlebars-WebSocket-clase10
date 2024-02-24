@@ -15,7 +15,6 @@ El proyecto está estructurado de la siguiente manera:
 - `public/`: Directorio donde estan los estilos de las plantillas handlebars.
 - `src/`: Directorio principal del código fuente.
   - `app.js`: Archivo principal de la aplicación.
-  - `utils.js`: Archivo con funciones de utilidad.
   - `managers/`: Directorio que contiene los gestores de datos.
   - `db/`: Directorio que almacena los archivos JSON de datos.
   - `views/`: Directorio que contiene las plantillas Handlebars.
