@@ -4,6 +4,11 @@ Este proyecto es parte del desafío de integración de Handlebars y WebSockets p
 
 ## Estructura del Proyecto
 
+**Rama main** deaafio resuelto usando CommonJS **require** y **module.exports**.
+**Rama ECMAScriptModules** desafio resuelto usando ECMAScript Modules **imports** y **exports**.
+
+## Estructura del Proyecto
+
 El proyecto está estructurado de la siguiente manera:
 
 - `public/`: Directorio donde estan los estilos de las plantillas handlebars.
