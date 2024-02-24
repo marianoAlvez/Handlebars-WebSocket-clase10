@@ -5,6 +5,7 @@ Este proyecto es parte del desafío de integración de Handlebars y WebSockets p
 ## Estructura del Proyecto
 
 **Rama main** deaafio resuelto usando CommonJS **require** y **module.exports**.
+
 **Rama ECMAScriptModules** desafio resuelto usando ECMAScript Modules **imports** y **exports**.
 
 ## Estructura del Proyecto
