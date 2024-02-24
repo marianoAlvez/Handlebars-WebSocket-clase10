@@ -12,7 +12,6 @@ Este proyecto es parte del desafío de integración de Handlebars y WebSockets p
 
 El proyecto está estructurado de la siguiente manera:
 
-- `public/`: Directorio donde estan los estilos de las plantillas handlebars.
 - `src/`: Directorio principal del código fuente.
   - `app.js`: Archivo principal de la aplicación.
   - `utils.js`: Archivo con funciones de utilidad.
@@ -23,6 +22,7 @@ El proyecto está estructurado de la siguiente manera:
       - `main.handlebars`: Layout principal que incluye el encabezado y el pie de página.
     - `home.handlebars`: Vista principal que muestra la lista de productos.
     - `realtimeproducts.handlebars`: Vista para la gestión en tiempo real de productos.
+  - `public/`: Directorio que contiene archivos estáticos.
 
 ## Funcionalidades Principales
 
