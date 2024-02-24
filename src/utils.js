@@ -1,9 +1,12 @@
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-export function getCurrentDirname() {
-    return __dirname;
-}
+export default __dirname;
+
+
+
+

@@ -1,19 +1,22 @@
-const express = require('express');
-const { Server } = require('socket.io');
-const handlebars = require("express-handlebars");
-const ProductsManager = require("./managers/products");
+import express from 'express';
+import __dirname from './utils.js';
+import { createServer } from 'http';
+import { Server } from 'socket.io';
+import handlebars from "express-handlebars";
+import ProductsManager from "./managers/products.js";
 
 const app = express();
 
 const productsManager = new ProductsManager();
 const PORT = 3000;
 
-const server = app.listen(PORT, () => {
-    console.log(`Server listening on port ${server.address().port}`);
-});
-server.on("error", error => console.log(`Server error: ${error}`));
-
+const server = createServer(app);
 const socketServer = new Server(server);
+
+app.engine('handlebars', handlebars.engine());
+app.set('view engine', 'handlebars');
+app.set('views', __dirname + '/views');
+app.use(express.static(__dirname+'/public'));
 
 app.get("/", async (req, res) => {
     const id = req.params.id;
@@ -52,10 +55,9 @@ socketServer.on('connection', (socket) => {
     });
 });
 
-app.engine("hbs", handlebars.engine());
-app.set("views", __dirname + "/views");
-app.set("view engine", "hbs");
-app.use(express.static('public'));
 
-// app.use('/static', express.static(__dirname + '/public'));
 app.use(express.json());
+
+server.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+});
